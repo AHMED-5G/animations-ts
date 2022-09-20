@@ -27,6 +27,8 @@ import {
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
 import Carousel from "../screens/Carousel";
+import Wheel from "../screens/Wheel";
+import TextAnimation from "../screens/TextAnimation";
 
 export default function Navigation({
   colorScheme,
@@ -65,6 +67,8 @@ function RootNavigator() {
       />
       <Stack.Group screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Carousel" component={Carousel} />
+        <Stack.Screen name="Wheel" component={Wheel} />
+        <Stack.Screen name="TextAnimation" component={TextAnimation} />
       </Stack.Group>
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />

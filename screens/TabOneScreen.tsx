@@ -10,9 +10,18 @@ export default function TabOneScreen({
     <View style={styles.container}>
       <TouchableOpacity style={styles.btnContainer}>
         <MedButton
+          title="TextAnimation"
+          onPress={() => navigation.navigate("TextAnimation")}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btnContainer}>
+        <MedButton
           title="Carousel"
           onPress={() => navigation.navigate("Carousel")}
         />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btnContainer}>
+        <MedButton title="Wheel" onPress={() => navigation.navigate("Wheel")} />
       </TouchableOpacity>
     </View>
   );
