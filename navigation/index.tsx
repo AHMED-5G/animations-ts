@@ -29,6 +29,7 @@ import LinkingConfiguration from "./LinkingConfiguration";
 import Carousel from "../screens/Carousel";
 import Wheel from "../screens/Wheel";
 import TextAnimation from "../screens/TextAnimation";
+import ScrollToIndex from '../screens/ScrollToIndex';
 
 export default function Navigation({
   colorScheme,
@@ -69,6 +70,7 @@ function RootNavigator() {
         <Stack.Screen name="Carousel" component={Carousel} />
         <Stack.Screen name="Wheel" component={Wheel} />
         <Stack.Screen name="TextAnimation" component={TextAnimation} />
+        <Stack.Screen name="ScrollToIndex" component={ScrollToIndex} />
       </Stack.Group>
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />

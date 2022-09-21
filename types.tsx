@@ -23,6 +23,7 @@ export type RootStackParamList = {
   Carousel: undefined;
   Wheel: undefined;
   TextAnimation: undefined;
+  ScrollToIndex: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
