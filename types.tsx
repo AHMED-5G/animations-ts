@@ -24,6 +24,7 @@ export type RootStackParamList = {
   Wheel: undefined;
   TextAnimation: undefined;
   ScrollToIndex: undefined;
+  Restaurant: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

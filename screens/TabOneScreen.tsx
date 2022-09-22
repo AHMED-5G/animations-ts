@@ -10,6 +10,12 @@ export default function TabOneScreen({
     <View style={styles.container}>
       <TouchableOpacity style={styles.btnContainer}>
         <MedButton
+          title="Restaurant"
+          onPress={() => navigation.navigate("Restaurant")}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btnContainer}>
+        <MedButton
           title="ScrollToIndex"
           onPress={() => navigation.navigate("ScrollToIndex")}
         />
