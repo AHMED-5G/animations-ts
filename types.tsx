@@ -9,6 +9,7 @@ import {
   NavigatorScreenParams,
 } from "@react-navigation/native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import  { CircularProgressInterface } from "./screens/CircularProgressProgs";
 
 declare global {
   namespace ReactNavigation {
@@ -25,6 +26,8 @@ export type RootStackParamList = {
   TextAnimation: undefined;
   ScrollToIndex: undefined;
   Restaurant: undefined;
+  // CircularProgressProgs: undefined;
+  CircularProgressProgs: CircularProgressInterface;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

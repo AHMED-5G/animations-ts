@@ -12,7 +12,7 @@ import {
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
-import { ColorSchemeName, Pressable } from "react-native";
+import { Animated, ColorSchemeName, Pressable } from "react-native";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
@@ -29,8 +29,9 @@ import LinkingConfiguration from "./LinkingConfiguration";
 import Carousel from "../screens/Carousel";
 import Wheel from "../screens/Wheel";
 import TextAnimation from "../screens/TextAnimation";
-import ScrollToIndex from '../screens/ScrollToIndex';
-import Restaurant from '../screens/Restaurant';
+import ScrollToIndex from "../screens/ScrollToIndex";
+import Restaurant from "../screens/Restaurant";
+import CircularProgressProgs from "../screens/CircularProgressProgs";
 
 export default function Navigation({
   colorScheme,
@@ -73,6 +74,11 @@ function RootNavigator() {
         <Stack.Screen name="TextAnimation" component={TextAnimation} />
         <Stack.Screen name="ScrollToIndex" component={ScrollToIndex} />
         <Stack.Screen name="Restaurant" component={Restaurant} />
+        <Stack.Screen
+          name="CircularProgressProgs"
+          component={CircularProgressProgs}
+          // initialParams={{ progress: "1" }}
+        />
       </Stack.Group>
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />

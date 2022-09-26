@@ -10,6 +10,12 @@ export default function TabOneScreen({
     <View style={styles.container}>
       <TouchableOpacity style={styles.btnContainer}>
         <MedButton
+          title="Circular Progress"
+          onPress={() => navigation.navigate("CircularProgressProgs")}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btnContainer}>
+        <MedButton
           title="Restaurant"
           onPress={() => navigation.navigate("Restaurant")}
         />

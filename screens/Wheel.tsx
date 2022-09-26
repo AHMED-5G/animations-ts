@@ -11,6 +11,7 @@ import Svg, { Path, G, Text as SText, TSpan } from "react-native-svg";
 import { width } from "../constants/dimensions";
 import {
   GestureHandlerRootView,
+  HandlerStateChangeEvent,
   PanGestureHandler,
 } from "react-native-gesture-handler";
 const numberOfSegments = 10;
@@ -48,7 +49,7 @@ const Wheel = ({ navigation }: RootStackScreenProps<"Wheel">) => {
     const deg = Math.abs(Math.round(angleValue % oneTurn));
     return Math.floor(deg / angleBySegment);
   }
-  const onPan = ({ nativeEvent }) => {
+  const onPan = ({ nativeEvent }: HandlerStateChangeEvent) => {
     // if (nativeEvent.state === State.END) {
     const { velocityY } = nativeEvent;
     Animated.decay(angle, {
